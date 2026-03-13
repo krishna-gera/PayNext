@@ -9,9 +9,25 @@
 <body class="centered-page">
   <div class="card auth-card">
     <div class="brand">PayNest</div>
-    <p class="subtitle">Smart expense sharing that feels like a mobile wallet app.</p>
-    <button id="google-login" class="btn primary block">Login with Google</button>
+    <p class="subtitle">Sign in with email/password or Google to continue.</p>
+
+    <label>Email</label>
+    <input id="auth-email" type="email" placeholder="you@example.com" autocomplete="email" />
+
+    <label>Password</label>
+    <input id="auth-password" type="password" placeholder="••••••••" autocomplete="current-password" />
+
+    <div class="auth-actions">
+      <button id="email-login" class="btn primary block" type="button">Login with Email</button>
+      <button id="email-signup" class="btn block" type="button">Create Account</button>
+    </div>
+
+    <div class="divider"><span>or</span></div>
+
+    <button id="google-login" class="btn ghost block" type="button">Continue with Google</button>
+    <p id="auth-status" class="subtitle"></p>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/auth.js"></script>
 </body>
