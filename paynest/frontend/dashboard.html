@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayNest Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <h2>PayNest</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </header>
+  <main class="layout">
+    <aside class="sidebar">
+      <button id="new-group-btn" class="btn primary">+ Create Group</button>
+      <a class="btn" href="add_expense.html">+ Add Expense</a>
+      <a class="btn" href="coming_soon.html">Scan Receipt (AI)</a>
+    </aside>
+    <section class="content">
+      <div class="grid cards">
+        <article class="card"><h3>Total Receivable</h3><p id="receivable">₹0</p></article>
+        <article class="card"><h3>Total Payable</h3><p id="payable">₹0</p></article>
+      </div>
+      <section class="card">
+        <h3>Your Groups</h3>
+        <div id="groups-list"></div>
+      </section>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
